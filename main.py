@@ -28,7 +28,7 @@ print(list_places)
 m = folium.Map(location=[32.0879048, 34.7148434], zoom_start=7)  # LOCATION OF TEL AVIV
 len_list = len(list_places)
 i = 0
-for c in [list(list_places)[0]]:
+for c in list(list_places):
     print(f'currently at "{c}" \t ,{len_list - i} remaining')
     i += 1
     map_url = f"https://api.geoapify.com/v1/geocode/search?text={c}&format=json&apiKey={API_KEYS[0]}"
